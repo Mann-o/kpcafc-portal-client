@@ -23,10 +23,10 @@ export const actions: ActionTree<RootState, RootState> = {
   updatePassword ({ commit }, newPassword) {
     commit('UPDATE_PASSWORD', newPassword)
   },
-  startLoading ({ commit }) {
+  startLoggingIn ({ commit }) {
     commit('START_LOGGING_IN')
   },
-  stopLoading ({ commit }) {
+  stopLoggingIn ({ commit }) {
     commit('STOP_LOGGING_IN')
   },
 }
