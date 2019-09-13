@@ -41,6 +41,7 @@ const authConfig: Configuration = {
   },
 
   plugins: [
+    { src: '@/plugins/access-control' },
     { src: '@/plugins/axios' },
   ],
 

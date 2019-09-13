@@ -1,9 +1,9 @@
 <template lang="pug">
-  h1 Page
+  nuxt
 </template>
 
 <script>
 export default {
-  name: 'PagePage',
+  name: 'LayoutRaw',
 }
 </script>
