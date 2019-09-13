@@ -1,9 +1,9 @@
 <template lang="pug">
-  h1 Home
+  h1 Page
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PagePage',
 }
 </script>

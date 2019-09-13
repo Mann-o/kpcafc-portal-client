@@ -8,12 +8,12 @@ const authConfig: Configuration = {
   },
 
   token: {
-    prefix: '_kpcafc_token.',
+    prefix: 'token.',
   },
 
   localStorage: false,
 
-  cookies: {
+  cookie: {
     name: '_kpcafc_auth.',
     prefix: '_kpcafc_auth.',
     options: {
@@ -31,7 +31,7 @@ const authConfig: Configuration = {
           propertyName: 'payload.token',
         },
         user: {
-          url: '/api/auth/user',
+          url: '/api/auth/me',
           method: 'get',
           propertyName: 'user',
         },
@@ -43,6 +43,8 @@ const authConfig: Configuration = {
   plugins: [
     { src: '@/plugins/axios' },
   ],
+
+  watchLoggedIn: true,
 }
 
 export default authConfig
