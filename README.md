@@ -1,12 +1,12 @@
-# kpcafc-website
+# kpcafc-portal-client
 
-> My tiptop Nuxt.js project
+> KPCAFC Portal frontend - powered by Nuxt.js
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # serve with hot reload at localhost:3000
 $ yarn dev
@@ -19,4 +19,4 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For a more detailed explanation on how things work, check out the [Nuxt.js documentation](https://nuxtjs.org).
