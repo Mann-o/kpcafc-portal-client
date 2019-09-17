@@ -13,6 +13,7 @@ export default createComponent({
 </script>
 
 <style lang="stylus">
+@import '~assets/styles/animation/fade'
 @import '~assets/styles/mixins/bem'
 
 .layout-auth

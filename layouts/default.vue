@@ -17,3 +17,7 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus">
+@import '~assets/styles/animation/fade'
+</style>

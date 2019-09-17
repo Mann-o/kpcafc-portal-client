@@ -1,10 +1,11 @@
 <template lang="pug">
-  h1 Home
+  .page-subs
+    h1 Sub Sheets
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PageSubs',
 
   transition: 'fade',
 }

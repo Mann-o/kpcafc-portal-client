@@ -1,10 +1,11 @@
 <template lang="pug">
-  h1 Home
+  .page-teams
+    h1 Teams
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PageTeams',
 
   transition: 'fade',
 }

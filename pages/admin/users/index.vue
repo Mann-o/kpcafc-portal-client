@@ -1,10 +1,11 @@
 <template lang="pug">
-  h1 Home
+  .page-admin-users-index
+    h1 Users
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PageAdminUsersIndex',
 
   transition: 'fade',
 }

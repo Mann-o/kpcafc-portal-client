@@ -1,10 +1,11 @@
 <template lang="pug">
-  h1 Home
+  .page-players
+    h1 Players
 </template>
 
 <script>
 export default {
-  name: 'PageIndex',
+  name: 'PagePlayers',
 
   transition: 'fade',
 }
