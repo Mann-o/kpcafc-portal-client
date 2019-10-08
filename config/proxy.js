@@ -1,11 +1,9 @@
-import { Configuration } from '@nuxt/types'
-
 require('dotenv').config()
 
-const proxyConfig: Configuration = {
+const proxyConfig = {
   '/api': {
     pathRewrite: {
-      '^/api': '/api/v1',
+      '^/api': '/api/v1/admin',
     },
 
     target: (process.env.NODE_ENV === 'production')

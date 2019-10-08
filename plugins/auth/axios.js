@@ -1,20 +1,18 @@
-import { Plugin } from '@nuxt/types'
-
-const axiosPlugin: Plugin = ({ app: { $axios } }) => {
+const axiosPlugin = ({ app: { $axios } }) => {
   // Request interceptor
-  $axios.onRequest((config: any) => {
+  $axios.onRequest((config) => {
     // Not used for anything yet - maybe later!
     return config
   })
 
   // Response interceptor
-  $axios.onResponse((response: any) => {
+  $axios.onResponse((response) => {
     // nothing yet
     return response
   })
 
   // Error interceptor
-  $axios.onError((err: any) => {
+  $axios.onError((err) => {
     return Promise.reject(err)
   })
 }

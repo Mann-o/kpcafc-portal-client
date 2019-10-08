@@ -1,6 +1,4 @@
-import { Configuration } from '@nuxt/types'
-
-const headConfig: Configuration = {
+const headConfig = {
   htmlAttrs: {
     lang: 'en',
   },

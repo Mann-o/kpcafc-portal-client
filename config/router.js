@@ -1,6 +1,4 @@
-import { Configuration } from '@nuxt/types'
-
-const routerConfig: Configuration = {
+const routerConfig = {
   base: '/',
   middleware: [
     'auth',

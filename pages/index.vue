@@ -1,5 +1,6 @@
 <template lang="pug">
-  h1 Home
+  .page-index
+    h1 Home
 </template>
 
 <script>

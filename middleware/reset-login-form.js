@@ -1,6 +1,4 @@
-import { Middleware } from '@nuxt/types'
-
-const resetLoginForm: Middleware = ({ store }) => {
+const resetLoginForm = ({ store }) => {
   store.dispatch('login/updateLoginId', null)
   store.dispatch('login/updatePassword', null)
 }

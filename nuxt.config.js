@@ -15,7 +15,9 @@ export default {
   auth,
   axios,
   buildModules,
-  build: Object.assign({ watch: ['config'] }, build),
+  build: Object.assign({
+    watch: ['config'],
+  }, build),
   head,
   loading,
   modules,

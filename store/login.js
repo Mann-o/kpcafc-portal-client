@@ -1,14 +1,4 @@
-import { MutationTree, ActionTree } from 'vuex'
-
-interface RootState {
-  credentials: {
-    loginId: string | null
-    password: string | null
-  }
-  isLoggingIn: boolean
-}
-
-export const state = (): RootState => ({
+export const state = () => ({
   credentials: {
     loginId: null,
     password: null,
@@ -16,7 +6,7 @@ export const state = (): RootState => ({
   isLoggingIn: false,
 })
 
-export const actions: ActionTree<RootState, RootState> = {
+export const actions = {
   updateLoginId ({ commit }, newLoginId) {
     commit('UPDATE_LOGIN_ID', newLoginId)
   },
@@ -31,7 +21,7 @@ export const actions: ActionTree<RootState, RootState> = {
   },
 }
 
-export const mutations: MutationTree<RootState> = {
+export const mutations = {
   START_LOGGING_IN (state) {
     state.isLoggingIn = true
   },

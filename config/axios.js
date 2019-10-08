@@ -1,6 +1,4 @@
-import { Configuration} from '@nuxt/types'
-
-const axiosConfig: Configuration = {
+const axiosConfig = {
   debug: (process.env.NODE_ENV !== 'production'),
   progress: true,
   proxy: true,

@@ -1,6 +1,4 @@
-import { Configuration } from '@nuxt/types'
-
-const authConfig: Configuration = {
+const authConfig = {
   redirect: {
     login: '/login',
     logout: '/login',
@@ -41,8 +39,8 @@ const authConfig: Configuration = {
   },
 
   plugins: [
-    { src: '@/plugins/access-control' },
-    { src: '@/plugins/axios' },
+    { src: '@/plugins/auth/access-control' },
+    { src: '@/plugins/auth/axios' },
   ],
 
   watchLoggedIn: true,
