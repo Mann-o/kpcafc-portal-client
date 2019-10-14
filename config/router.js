@@ -2,7 +2,6 @@ const routerConfig = {
   base: '/',
   middleware: [
     'auth',
-    'reset-login-form',
   ],
 }
 

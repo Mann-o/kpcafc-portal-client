@@ -3,7 +3,7 @@ class ACL {
     this.$auth = $auth
   }
 
-  isAdministrator () {
+  get isAdministrator () {
     return this.$auth.loggedIn && this.hasRole('administrator')
   }
 
@@ -16,7 +16,7 @@ class ACL {
   }
 }
 
-export default function ({ $auth }, inject) {
+export default ({ $auth }, inject) => {
   const acl = new ACL($auth)
   inject('acl', acl)
 }

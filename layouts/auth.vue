@@ -12,7 +12,7 @@ export default {
 
 <style lang="stylus">
 @import '~assets/styles/animation/fade'
-@import '~assets/styles/mixins/bem'
+@import '~assets/styles/core/mixins/bem'
 
 .layout-auth
 

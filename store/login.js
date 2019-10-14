@@ -19,6 +19,11 @@ export const actions = {
   stopLoggingIn ({ commit }) {
     commit('STOP_LOGGING_IN')
   },
+  resetLoginForm ({ commit }) {
+    commit('UPDATE_LOGIN_ID', null)
+    commit('UPDATE_PASSWORD', null)
+    commit('STOP_LOGGING_IN')
+  },
 }
 
 export const mutations = {

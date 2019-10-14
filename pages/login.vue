@@ -1,8 +1,10 @@
 <template lang="pug">
   .page-login
     BCard(title="Login")
+
       h3(slot="header") KPCAFC Portal
       BCardText Please enter your login credentials
+
       BForm(@submit.prevent="login")
         BFormGroup(
           label="Login ID"
@@ -25,13 +27,18 @@
             placeholder="Enter Password"
             :disabled="isLoggingIn"
           )
-        BButton(type="submit" variant="primary" :disabled="isLoggingIn")
-          span Login
-          BSpinner(v-if="isLoggingIn" :style="{ marginLeft: '8px' }" small)
+        SpinnerButton(
+          type="submit"
+          :disabled="isLoggingIn"
+          :loading="isLoggingIn"
+          label="Login"
+          label-when-loading="Logging in"
+        )
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import Toaster from '@/mixins/toaster'
 
 export default {
   name: 'PageLogin',
@@ -39,6 +46,12 @@ export default {
   layout: 'auth',
 
   transition: 'fade',
+
+  components: {
+    SpinnerButton: () => import('@/components/elements/SpinnerButton'),
+  },
+
+  mixins: [Toaster],
 
   computed: {
     ...mapState('login', [
@@ -55,22 +68,13 @@ export default {
       'stopLoggingIn',
     ]),
     async login () {
-      this.$nuxt.$loading.start()
-      this.startLoggingIn()
       try {
+        this.startLoggingIn()
         await this.$auth.loginWith('local', { data: this.credentials })
       } catch (error) {
-        this.$bvToast.toast(
-          'Invalid Login ID and/or password, please try again.',
-          {
-            title: 'Error',
-            autoHideDelay: 5000,
-            variant: 'danger',
-          }
-        )
+        this.toastError(error, 'Invalid Login ID and/or Password, please try again.')
+        this.stopLoggingIn()
       }
-      this.stopLoggingIn()
-      this.$nuxt.$loading.finish()
     },
   },
 }

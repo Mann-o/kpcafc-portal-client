@@ -10,6 +10,7 @@ export default {
   transition: 'fade',
 
   mounted () {
+    this.$store.dispatch('login/resetLoginForm')
     this.$auth.logout()
     this.$router.push('/login')
   },
