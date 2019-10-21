@@ -12,6 +12,7 @@
         BNavItem(to="/subs" active-class="active") Sub Sheets
         BNavItemDropdown(v-if="$acl.isAdministrator" text="Admin" event="hover")
           BDropdownItem(to="/admin/users" active-class="active") Users
+          BDropdownItem(to="/admin/age-groups" active-class="active") Age Groups
         BNavItem(to="/logout" active-class="active") Logout
 </template>
 

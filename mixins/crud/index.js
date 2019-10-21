@@ -1,3 +1,5 @@
+import { kebabCase } from 'lodash'
+
 export default (model) => ({
   transition: 'fade',
 
@@ -23,7 +25,7 @@ export default (model) => ({
   },
 
   async asyncData ({ app: { $axios } }) {
-    const { data } = await $axios.get(`/api/${model}`)
+    const { data } = await $axios.get(`/api/${kebabCase(model)}`)
     return { [model]: data }
   },
 
@@ -31,7 +33,7 @@ export default (model) => ({
     async index () {
       this.indexing = true
       this[model] = []
-      const { data } = await this.$axios.get(`/api/${model}`)
+      const { data } = await this.$axios.get(`/api/${kebabCase(model)}`)
       this[model] = data
       if (this.shouldChangeToPreviousPage) {
         this.currentPage = this.currentPage - 1
